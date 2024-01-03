@@ -1,11 +1,20 @@
 classoftemp = ''
 asktemp = float
+string_number = str(asktemp) #tried to convet it to a string but it didnt work ¯\_(ツ)_/¯
+f = open("temps_recorded.txt", "a")
+f.close()
+def Celsius():
+    l = open("temps_recorded.txt", "a+")
+    l.write(f"The tempurature is {asktemp} \n")
+    l.close()
+
 def Calculator():
     print("What is the tempurature?:")
     asktemp = float(input())
-    print("Is that in Celcius, Fahrenheit, or Kelvin?")
+    print("Is that in Celsius, Fahrenheit, or Kelvin?")
     classoftemp = input("(Type C, F, or K): ")
     if classoftemp == 'C':
+        Celsius()
         print("Fahrenheit:")
         print(asktemp * 9/5 + 32)
         print("Kelvin:")
